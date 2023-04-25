@@ -1,0 +1,14 @@
+db:
+  host: 'localhost'
+  port: '3306'
+  database: 'test'
+  username: 'root'
+  password: 'root'
+  charset: 'utf8'
+log:
+  path: 'logs'
+  file: 'app.log'
+  level: 'info'
+consul:
+  host: "127.0.0.1"
+  port: "8500"
