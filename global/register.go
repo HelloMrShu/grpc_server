@@ -23,11 +23,10 @@ func RegisterConsul() (serviceId string) {
 	port := ServerConfig.Port
 
 	serviceId = fmt.Sprintf("%s-%s", ip, uuid.NewV4())
-	name := fmt.Sprintf("%s(%d)", ServiceName, port)
 
 	reg := new(api.AgentServiceRegistration)
 	reg.ID = serviceId           // 服务节点的名称
-	reg.Name = name              // 服务名称
+	reg.Name = ServiceName       // 服务名称
 	reg.Address = ip             // 服务 IP
 	reg.Port = port              // 服务端口ßßßß
 	reg.Tags = []string{"v1000"} // tag，可以为空
